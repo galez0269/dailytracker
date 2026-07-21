@@ -1,0 +1,235 @@
+# Source registry for the Industry Tracker.
+#
+# type:         trade | cultural | trend_studio | substack | platform
+# access_tier:  clean (freely fetchable) | framing_only (paywall/subscription — headlines + discourse)
+#               | curated_substack (RSS) | platform_gated (read via culture-watchers, not scraped)
+# feed:         verified RSS URL, or "discover-at-run" (resolve via search at brief time)
+# cadence:      for trend_studios — they publish periodically, not daily
+# categories:   which brief sections this source feeds
+
+sources:
+
+  # ================= TRADE (Industry Buzz, POVs) =================
+  # WARC, Contagious and The Work are all part of the LIONS / Informa
+  # intelligence stack and are subscription-gated. Use their publicly
+  # reported findings and published report summaries; don't assume full-text.
+  - name: WARC
+    type: trade
+    access_tier: framing_only
+    feed: discover-at-run        # warc.com — subscription
+    note: effectiveness research + case studies; LIONS/Informa
+    categories: [industry_buzz, povs]
+
+  - name: Contagious
+    type: trade
+    access_tier: framing_only
+    feed: discover-at-run        # contagious.com — subscription
+    note: creative & strategy intelligence; LIONS/Informa
+    categories: [industry_buzz, povs, trends]
+
+  - name: The Work (LIONS)
+    type: trade
+    access_tier: framing_only
+    feed: discover-at-run        # lovethework.com — subscription; also publishes Creativity Reports
+    note: Cannes Lions creativity database + campaign case studies
+    categories: [industry_buzz, povs]
+
+  - name: Ad Age
+    type: trade
+    access_tier: clean
+    feed: discover-at-run        # adage.com RSS index; endpoints vary
+    categories: [industry_buzz, povs, misc]
+
+  - name: Adweek
+    type: trade
+    access_tier: clean
+    feed: discover-at-run        # adweek.com — metered paywall
+    categories: [industry_buzz, povs]
+
+  - name: Marketing Interactive
+    type: trade
+    access_tier: clean
+    region: APAC
+    feed: discover-at-run        # marketing-interactive.com
+    note: strong for the APAC / global-network view
+    categories: [industry_buzz, povs]
+
+  - name: LBB Online
+    type: trade
+    access_tier: clean
+    feed: discover-at-run        # lbbonline.com
+    categories: [industry_buzz, povs, misc]
+
+  # ================= CULTURAL (Trends, Misc) =================
+  - name: The New York Times
+    type: cultural
+    access_tier: framing_only
+    feed: discover-at-run
+    categories: [industry_buzz, trends, misc]
+
+  - name: Wall Street Journal
+    type: cultural
+    access_tier: framing_only
+    feed: discover-at-run
+    categories: [industry_buzz, misc]
+
+  - name: The Atlantic
+    type: cultural
+    access_tier: framing_only
+    feed: discover-at-run
+    categories: [trends, misc]
+
+  - name: The Cut
+    type: cultural
+    access_tier: clean
+    feed: discover-at-run        # thecut.com (NY Mag network)
+    categories: [trends, misc]
+
+  - name: Dazed
+    type: cultural
+    access_tier: clean
+    feed: discover-at-run        # dazeddigital.com
+    note: youth / internet culture; early signal for Trends
+    categories: [trends, misc]
+
+  # ================= TREND STUDIOS (Trends, POVs) =================
+  # Periodic reports, not daily news. Check for a NEW drop; when one lands,
+  # summarise its thesis, don't just cite it.
+  - name: MØRNING
+    type: trend_studio
+    access_tier: clean
+    cadence: periodic reports
+    feed: https://morningfyi.substack.com/feed   # "Burn After Reading" newsletter
+    note: London creative-strategy studio (Lydia Pang / Sam Jackson); reports at morning.fyi; social/digital-culture POV
+    categories: [trends, povs]
+
+  - name: Protein
+    type: trend_studio
+    access_tier: framing_only
+    cadence: periodic reports / briefings
+    feed: discover-at-run        # proteinagency.com / protein.xyz — XYZ is membership; some public reports
+    note: cultural insight & foresight consultancy; SEED CLUB network
+    categories: [trends]
+
+  - name: Canvas8
+    type: trend_studio
+    access_tier: framing_only
+    region: global (London / NY / LA / Singapore)
+    cadence: Library updated daily; free "Keeping TABS" monthly newsletter + report tasters
+    feed: discover-at-run        # canvas8.com — Library is subscription
+    note: behavioural & cultural insights practice (you wrote "Canvas7" — assuming Canvas8)
+    categories: [trends, povs]
+
+  - name: The Future Laboratory
+    type: trend_studio
+    access_tier: framing_only
+    cadence: periodic reports; LS:N Global updated regularly
+    feed: discover-at-run        # thefuturelaboratory.com — LS:N Global is subscription
+    note: foresight / futures consultancy
+    categories: [trends]
+
+  # ================= CURATED SUBSTACK (Trends, POVs) — feeds VERIFIED =================
+  - name: Feed Me
+    type: substack
+    author: Emily Sundberg
+    access_tier: curated_substack
+    feed: https://www.readfeedme.com/feed
+    categories: [industry_buzz, trends, povs]
+
+  - name: idle gaze
+    type: substack
+    author: Alexi Gunner
+    access_tier: curated_substack
+    feed: https://idlegaze.substack.com/feed
+    categories: [trends, povs]
+
+  - name: WHAT'S ANU
+    type: substack
+    author: ANU
+    access_tier: curated_substack
+    feed: https://whatsanu.substack.com/feed
+    note: flagship series "Trend Radar"; macrotrend framework
+    categories: [trends]
+
+  - name: Links I Would Gchat You If We Were Friends
+    type: substack
+    author: Caitlin Dewey
+    access_tier: curated_substack
+    feed: https://linksiwouldgchatyou.substack.com/feed
+    categories: [trends, misc]
+
+  - name: Link in Bio
+    type: substack
+    author: Rachel Karten
+    access_tier: curated_substack
+    feed: https://milkkarten.substack.com/feed   # custom domains: milkkarten.net, linkinbio.news
+    categories: [industry_buzz, trends, povs]
+
+  - name: After School
+    type: substack
+    author: Casey Lewis
+    access_tier: curated_substack
+    feed: https://afterschool.substack.com/feed
+    note: Gen Z / Gen Alpha youth-culture trends
+    categories: [trends, misc]
+
+  - name: Burn After Reading
+    type: substack
+    author: MØRNING (Lydia Pang / Sam Jackson)
+    access_tier: curated_substack
+    feed: https://morningfyi.substack.com/feed
+    note: MØRNING's weekly newsletter (same feed as the studio entry above)
+    categories: [trends, povs]
+
+  # ================= THINKERS (POVs, Trends) — individual voices to track =================
+  # Strategists/analysts whose POVs and frameworks are worth following. The natural
+  # feed for a "Mental Models" category if you ever reinstate it.
+  - name: Eugene Healey
+    type: thinker
+    access_tier: curated_substack
+    feed: https://eugenehealey.substack.com/feed   # "Considered Chaos"
+    note: brand strategy for the algorithmic era; founder Studio EH; also IG/TikTok/LinkedIn @eugbrandstrat (spelling: Healey)
+    categories: [povs, trends]
+
+  - name: Matt Klein
+    type: thinker
+    access_tier: curated_substack
+    feed: https://zine.kleinkleinklein.com/feed     # "ZINE"
+    note: cultural theorist; Head of Global Foresight at Reddit; foresight-as-choice
+    categories: [trends, povs]
+
+  - name: Zoe Scaman
+    type: thinker
+    access_tier: curated_substack
+    feed: https://zoescaman.substack.com/feed        # "Musings Of A Wandering Mind"
+    note: founder of Bodacious; long-form strategy essays
+    categories: [povs, trends]
+
+  - name: Graeme Douglas-Kilgannon
+    type: thinker
+    access_tier: framing_only
+    platform: LinkedIn
+    feed: discover-at-run        # publishes articles/posts on LinkedIn — no clean RSS; search by name
+    note: "G" — CEO of Stitchy London; post-social-era brand & social strategy
+    categories: [industry_buzz, povs]
+
+  # ================= PLATFORM (Trends) — read via culture-watchers, never scraped =================
+  # No SEO "trends" listicles, no marketing-aggregator blogs. Platform velocity is
+  # read THROUGH the trusted watchers above (After School, WHAT'S ANU, Dazed, MØRNING).
+  - name: Google Trends
+    type: platform
+    access_tier: platform_gated
+    method: direct check (trends.google.com) for corroboration only
+    categories: [trends]
+
+  - name: Reddit
+    type: platform
+    access_tier: platform_gated
+    method: search for the questions people are actually asking
+    categories: [industry_buzz, trends]
+
+  - name: TikTok / Instagram
+    type: platform
+    access_tier: platform_gated
+    method: read via registered culture-watchers (After School, WHAT'S ANU, Dazed, MØRNING) — do not scrape, do not use aggregator round-ups
+    categories: [trends]
