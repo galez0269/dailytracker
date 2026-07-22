@@ -1,6 +1,6 @@
 # Ledger
 
-The cumulative, structured record — the compounding layer behind the year-end report. `daily-brief` and `archive` append one row per MUST-KNOW / HIGH-IMPACT / SIGNAL item. At year-end you read this, not 250 briefs, to trace recurring themes, persistent POVs, and where the network led.
+The cumulative, structured record — the compounding layer behind the year-end report. `daily-brief` and `lens` append one row per MUST-KNOW / HIGH-IMPACT / SIGNAL item. At year-end you read this, not 250 briefs, to trace recurring themes, persistent POVs, and where the network led.
 
 Columns: **Date** · **Category** · **Item** · **Source** · **Link** · **Tier** · **Themes** (tags) · **Why us**
 
