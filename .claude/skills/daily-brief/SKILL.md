@@ -58,12 +58,15 @@ Double-entry, always:
    `Date | Category | Item | Source | Link | Tier | Themes | Why us`
    Include the item's real URL in the Link column. Reuse existing theme tags where they fit — consistent tags are what make year-end pattern-tracking work. Idempotent: if today's date already has rows, replace them rather than duplicating.
 
-3. **Publish** — if this repo has a git remote configured (i.e. you're in Claude Code on your machine, not the claude.ai sandbox), stage, commit and push so the brief and updated ledger reach GitHub:
+3. **Publish via pull request — never push to `main` directly.** If this repo has a git remote configured:
    ```bash
+   git checkout main && git pull
+   git checkout -b "daily-brief/$(date +%F)"
    git add "briefs/$(date +%F).md" ledger.md
    git commit -m "brief: $(date +%F)"
-   git push
+   git push -u origin "daily-brief/$(date +%F)"
    ```
+   Then open a PR from that branch into `main` (via the GitHub API using the cached credential, or `gh pr create` if available) titled `Daily Brief: YYYY-MM-DD`, body = the brief's Must-knows section. Finish by checking out `main` again locally so the working directory doesn't sit on the dated branch. The user reviews and merges the PR themselves on GitHub — this skill must never merge it or push to `main`.
    In a sandbox with no remote, skip this step — just hand the brief back.
 
 Then hand the brief back in the conversation.
