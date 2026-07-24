@@ -58,11 +58,17 @@ Double-entry, always:
    `Date | Category | Item | Source | Link | Tier | Themes | Why us`
    Include the item's real URL in the Link column. Reuse existing theme tags where they fit — consistent tags are what make year-end pattern-tracking work. Idempotent: if today's date already has rows, replace them rather than duplicating.
 
-3. **Publish via pull request — never push to `main` directly.** If this repo has a git remote configured:
+3. **Export a matching Word doc:**
+   ```bash
+   python3 scripts/brief_to_docx.py "briefs/$(date +%F).md"
+   ```
+   This produces `briefs/[YYYY-MM-DD] Daily Brief.docx` (Inter Tight font, tier-coloured labels, live hyperlinks) from the markdown you just wrote — always run it after step 1, so the docx never goes stale relative to the .md. Requires `python-docx` (`pip3 install --user python-docx` once if missing).
+
+4. **Publish via pull request — never push to `main` directly.** If this repo has a git remote configured:
    ```bash
    git checkout main && git pull
    git checkout -b "daily-brief/$(date +%F)"
-   git add "briefs/$(date +%F).md" ledger.md
+   git add "briefs/$(date +%F).md" "briefs/[$(date +%F)] Daily Brief.docx" ledger.md
    git commit -m "brief: $(date +%F)"
    git push -u origin "daily-brief/$(date +%F)"
    ```
