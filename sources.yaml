@@ -60,6 +60,20 @@ sources:
     feed: discover-at-run        # lbbonline.com
     categories: [industry_buzz, povs, misc]
 
+  - name: Digiday
+    type: trade
+    access_tier: clean
+    feed: discover-at-run        # digiday.com — metered paywall
+    note: strong for media/platform-economics and employee/creator-program stories other trades miss
+    categories: [industry_buzz, povs, misc]
+
+  - name: Marketing Dive
+    type: trade
+    access_tier: clean
+    feed: discover-at-run        # marketingdive.com
+    note: strong for brand-side marketing-program news (e.g. employee/creator programs) other trades miss
+    categories: [industry_buzz, povs, misc]
+
   # ================= CULTURAL (Trends, Misc) =================
   - name: The New York Times
     type: cultural
