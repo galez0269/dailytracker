@@ -8,6 +8,12 @@
 
 **Key categories:** FMCG · Entertainment · Tech · Beauty & Wellness
 
+**Secondary, added 2026-09-15:** Luxury fashion · Insurance & financial services
+
+> Added to close a coverage gap found when the market briefing tried to route France (Chanel, Groupama) and neither sector existed in any registry. Sources added to `sources.yaml` the same day: Business of Fashion, Highsnobiety, Glossy, Vogue Business.
+>
+> Read these two through **this** tracker's lens, not a trade one — status, taste, provenance, trust, and what makes a premium defensible. That maps directly onto the Loop's **Power** arm and onto *unfakeable capital*, so an item here should usually be gradable on those throughlines. If it can only be graded as category news, it's NOISE. The commercial read on the same sectors belongs in `must-know-GLT-tracker`.
+
 **What we're elevating:** our reputation as a global social creative agency — specifically our influencer/creator marketing capabilities, cultural insights capabilities, and social-first strategy and creative.
 
 ## 2. The network's throughlines & existing POV

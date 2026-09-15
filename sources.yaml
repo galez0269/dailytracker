@@ -106,6 +106,56 @@ sources:
     note: youth / internet culture; early signal for Trends
     categories: [trends, misc]
 
+
+  # ========== LUXURY FASHION & INSURANCE (added 2026-09-15, feeds VERIFIED) ==========
+  # Added to close the France coverage gap (Chanel, Groupama). These are business
+  # and culture titles, not category trades — read for the cultural mechanic
+  # (status, taste, provenance, trust), which is what this tracker grades on.
+  # The commercial read on the same sectors lives in must-know-GLT-tracker.
+
+  - name: Business of Fashion
+    type: trade
+    access_tier: clean
+    feed: https://www.businessoffashion.com/feed        # VERIFIED — valid RSS, but low volume (~4 items), CDATA-wrapped
+    note: >
+      The luxury/fashion business of record. Low feed volume, so treat as a
+      headline tap and fall back to a page fetch of businessoffashion.com
+      (verified 200) when it looks stale. Strongest on how luxury defends a
+      price premium — direct material for the Loop's Power arm.
+    categories: [industry_buzz, povs, trends]
+
+  - name: Highsnobiety
+    type: cultural
+    access_tier: clean
+    feed: https://www.highsnobiety.com/feed/            # VERIFIED — 16 items
+    note: >
+      Streetwear, status and luxury-adjacent youth culture. Already cited in
+      the 2026 Tracker ("The Status Economy"), so this formalises a source the
+      lens was informally using. Early signal on status and taste — Power and
+      unfakeable-capital material.
+    categories: [trends, misc, povs]
+
+  - name: Glossy
+    type: trade
+    access_tier: clean
+    feed: https://www.glossy.co/feed                    # VERIFIED — 20 items
+    note: >
+      Digiday Media's fashion/beauty/luxury title — same editorial discipline
+      as Digiday, which is already registered. Best of the added set on how
+      luxury and beauty brands actually behave on social and with creators.
+      Also strengthens the existing Beauty & Wellness priority category.
+    categories: [industry_buzz, trends, povs]
+
+  - name: Vogue Business
+    type: trade
+    access_tier: framing_only
+    feed: discover-at-run        # VERIFIED NO RSS — /feed, /rss, /feed/rss all 404; homepage fetches 200
+    note: >
+      Luxury's own commercial thinking. No feed exists, so resolve via search
+      or a homepage fetch at brief time. Framing-only: treat headlines and
+      published findings as the unit, don't assume full text.
+    categories: [industry_buzz, trends, povs]
+
   # ================= TREND STUDIOS (Trends, POVs) =================
   # Periodic reports, not daily news. Check for a NEW drop; when one lands,
   # summarise its thesis, don't just cite it.
@@ -202,7 +252,7 @@ sources:
     type: thinker
     access_tier: curated_substack
     feed: https://eugenehealey.substack.com/feed   # "Considered Chaos"
-    note: brand strategy for the algorithmic era; founder Studio EH; also IG/TikTok/LinkedIn @eugbrandstrat (spelling: Healey)
+    note: "brand strategy for the algorithmic era; founder Studio EH; also IG/TikTok/LinkedIn @eugbrandstrat (spelling: Healey)"
     categories: [povs, trends]
 
   - name: Matt Klein
@@ -224,7 +274,7 @@ sources:
     access_tier: framing_only
     platform: LinkedIn
     feed: discover-at-run        # publishes articles/posts on LinkedIn — no clean RSS; search by name
-    note: "G" — CEO of Stitchy London; post-social-era brand & social strategy
+    note: '"G" — CEO of Stitchy London; post-social-era brand & social strategy'
     categories: [industry_buzz, povs]
 
   # ================= PLATFORM (Trends) — read via culture-watchers, never scraped =================
