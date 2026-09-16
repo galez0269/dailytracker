@@ -215,6 +215,14 @@ sources:
     note: flagship series "Trend Radar"; macrotrend framework
     categories: [trends]
 
+  - name: being-on-line
+    type: substack
+    author: Ruby Justice Thelot
+    access_tier: curated_substack
+    feed: https://beingonline.substack.com/feed
+    note: culture, technology and design essays; see "Everything is Default Fake" on synthetic-media skepticism
+    categories: [trends, povs]
+
   - name: Links I Would Gchat You If We Were Friends
     type: substack
     author: Caitlin Dewey
