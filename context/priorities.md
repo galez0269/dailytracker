@@ -33,10 +33,10 @@
 ## 3. Upcoming comms & report launches
 
 - **Creator Report** — completed. No longer in flight, so creator items don't earn the in-flight-report boost; creator marketing remains a core capability we're elevating (section 1)
-- **FMCG Report** — in progress, October
-- **Think Forward** (annual) — kicks off October; shape and scope still open
+- **FMCG Report** — no longer happening. FMCG stays a key category (section 1), but don't tag items as FMCG Report material.
+- **Think Forward** (annual) — kicking off now. The brief: setting the annual strategic agenda for how brands navigate social. Focuses on macro behavioral shifts - not fleeting micro-memes or tactical format trends - with clear brand implications. Potential for selective cultural or data partners (e.g., Boiler Room) to enrich specific behavioral shifts.
 
-> *An item that feeds an in-flight report is worth more. Flag ledger rows that could feed one.*
+> *Think Forward is now the one in-flight report. An item that feeds it is worth more: a macro behavioral shift with a clear brand implication, not a micro-meme or a tactical format trend. Flag ledger rows that could feed it, and any that point to a possible cultural or data partner.*
 
 ## 4. What "why us" means
 
