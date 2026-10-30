@@ -32,7 +32,7 @@
 
 ## 3. Upcoming comms & report launches
 
-- **Creator Report** — in progress, August
+- **Creator Report** — completed. No longer in flight, so creator items don't earn the in-flight-report boost; creator marketing remains a core capability we're elevating (section 1)
 - **FMCG Report** — in progress, October
 - **Think Forward** (annual) — kicks off October; shape and scope still open
 
